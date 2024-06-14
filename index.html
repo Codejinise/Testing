@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age to Destiny</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        input, button {
+            padding: 10px;
+            margin: 10px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Discover Your Destiny</h1>
+    <p>Enter your age to find out your destiny:</p>
+    <input type="number" id="ageInput" placeholder="Enter your age">
+    <button onclick="showDestiny()">Tell My Destiny</button>
+    <p id="destinyResult"></p>
+
+    <script>
+        function showDestiny() {
+            const age = document.getElementById('ageInput').value;
+            let destiny;
+
+            if (age < 18) {
+                destiny = "You are destined to learn and grow.";
+            } else if (age >= 18 && age <= 30) {
+                destiny = "You are destined to explore and achieve.";
+            } else if (age > 30 && age <= 50) {
+                destiny = "You are destined to lead and inspire.";
+            } else {
+                destiny = "You are destined to share your wisdom.";
+            }
+
+            document.getElementById('destinyResult').innerText = destiny;
+        }
+    </script>
+</body>
+</html>
